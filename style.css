@@ -1,0 +1,385 @@
+/*full screen*/
+
+
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFFFFF;
+    height: 100vh;
+    width: 100vw;
+}
+
+/*header*/
+
+header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.menuItem{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #161513;
+    font-size: 16px;
+    margin: 8px 20px;
+}
+
+.burguer{
+    display: none;
+}
+
+.menuItem:hover{
+    color: #DE663D;
+    border-bottom: 2.5px solid #161513;
+}
+
+.menuBoton{
+    border: 1px solid #161513;
+    padding: 8px 25px;
+    background-color: transparent;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #161513;
+    font-size: 16px;
+}
+
+.menuBoton:hover{
+    background-color: #161513;
+    text-decoration: underline;
+    color: white;
+    transition: 0.5s;
+}
+
+/*main*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:(100%-100px);
+    position: relative;
+}
+
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorMain1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis: 50%;
+    animation: movimiento2;
+    animation-duration: 2s;
+    margin-left: 20px;
+}
+
+.contenedorMain2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 45%;
+}
+
+.contenedorMain1 > p{
+    margin: 5px 0;
+}
+
+.textoHero{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #161513;
+    font-size: 60px;
+    line-height: 64px;
+    letter-spacing: -0.01em;
+}
+
+span{
+    text-decoration: line-through;
+}
+
+.textoImgHero{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.textoImgHero>p{
+    margin: 30px 0;
+    letter-spacing: -0.01em;
+}
+
+.textoImgHero>img{
+    margin: 30px 20px;
+}
+
+.botonHero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton1{
+    border: 1px solid #161513;
+    background-color:#161513;
+    color: white;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    padding: 8px 25px;
+    font-size: 16px;
+}
+
+.boton1:hover{
+    text-decoration: underline;
+}
+
+.boton2{
+    border: 1px solid #161513;
+    padding: 8px 25px;
+    background-color: transparent;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #161513;
+    font-size: 16px;
+}
+
+.boton2:hover{
+    text-decoration: underline;
+}
+
+.imgHero{
+    background-color: #FFFFFF;
+    width: 90%;
+    z-index: -1;
+    animation: movimiento;
+    animation-duration: 2s;
+}
+
+
+.banner{
+    position:absolute;
+    bottom: -15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161513;
+    color:#FFFFFF;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    width: 100%;
+    height: 90px;
+    transform: skewY(-2deg);
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateX(150px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes movimiento2{
+    0%{
+        transform: translateX(-150px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@media (max-width:1400px){
+    .banner{
+        bottom: -25px;
+    }
+}
+
+@media (max-width:1300px){
+    .banner{
+        bottom: -50px;
+    }
+}
+
+@media (max-width:1200px){
+    .banner{
+        bottom: -90px;
+    }
+}
+
+@media (max-width:990px){
+
+    nav{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuItem{
+        display: none;
+    }
+
+    .menuBoton{
+        display: none;
+    }
+
+    .burguer{
+        display: block;
+        font-family: "Bai Jamjuree", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        background-color: #161513;
+        color: #FFFFFF;
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+    .hero{
+        flex-wrap: wrap;
+    }
+
+    .contenedorMain1{
+        flex-basis: 90%;
+        margin-left: 40px;
+    }
+
+    .contenedorMain2{
+        flex-basis: 100%;
+    }
+
+    .imgHero{
+        width:100%;
+    }
+}
+
+@media (max-width:860px){
+    .banner{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:770px){
+    .banner{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:550px){
+    .banner{
+        display: none;
+    }
+
+    .textoImgHero{
+       flex-wrap: wrap;
+    }
+
+    .textoImgHero>p{
+        margin: 10px 0;
+    }
+
+    .textoImgHero>img{
+        margin: 10px 20px;
+    }
+}
+
+@media (max-width:450px){
+    .banner{
+        display: none;
+    }
+    .textoHero{
+        font-size: 40px;
+    }
+    .textoImgHero{
+       flex-wrap: wrap;
+    }
+
+    .textoImgHero>p{
+        margin: 10px 0;
+    }
+
+    .textoImgHero>img{
+        margin: 10px 20px;
+    }
+
+    .botonHero{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .boton1{
+        padding: 8px 80px;
+    }
+
+    .boton2{
+        padding: 8px 97px;
+    }
+}
+
+@media (max-width:330px){
+    .boton1{
+        padding: 8px 50px;
+    }
+
+    .boton2{
+        padding: 8px 67px;
+    }
+}
+
+@media (max-width:260px){
+
+    .textoHero{
+        font-size: 20px;
+    }
+
+    .textoImgHero{
+        font-size: 10px;
+    }
+    
+    .boton1{
+        padding: 8px 36px;
+        font-size: 10px;
+    }
+
+    .boton2{
+        padding: 8px 47px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width:210px){
+    .boton1{
+        padding: 8px 5px;
+        
+    }
+
+    .boton2{
+        padding: 8px 15px;
+        
+    }
+}
